@@ -1,0 +1,16 @@
+manifest.json{
+  "name": "El Arte de Tocar | Bienestar",
+  "short_name": "Bienestar",
+  "description": "Plataforma terapéutica y educativa de masoterapia.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#F7F5F0",
+  "theme_color": "#A3B18A",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/3064/3064339.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
