@@ -1,0 +1,71 @@
+index.html<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espacio de Bienestar | Masoterapia Integral</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header class="hero">
+        <h1>El bienestar comienza cuando el cuerpo vuelve a sentirse escuchado.</h1>
+        <p>Explora tu cuerpo, descubre lo que necesita y reserva tu sesión.</p>
+    </header>
+
+    <main>
+        <section class="interactive-map-section">
+            <h2>Mapa Corporal Interactivo</h2>
+            <p>Toca la zona donde sientes molestia o tensión.</p>
+            
+            <div class="map-container">
+                <svg viewBox="0 0 200 400" class="body-map">
+                    <path id="zona-cuello" class="body-part" d="M80,50 Q100,70 120,50 L140,80 Q100,90 60,80 Z" data-name="Cuello y Cervicales" data-symptom="Tensión por estrés o malas posturas." data-massage="Masaje Descontracturante Cervical" />
+                    
+                    <path id="zona-espalda" class="body-part" d="M60,85 Q100,100 140,85 L130,200 Q100,220 70,200 Z" data-name="Espalda y Dorsales" data-symptom="Rigidez por sedentarismo (Cadena Posterior)." data-massage="Masaje de Tejido Profundo" />
+                    
+                    <path id="zona-lumbar" class="body-part" d="M70,205 Q100,225 130,205 L125,250 Q100,260 75,250 Z" data-name="Zona Lumbar" data-symptom="Fatiga y carga en la zona baja." data-massage="Masaje Relajante con Calor" />
+                    
+                    <path id="zona-piernas" class="body-part" d="M75,255 L95,255 L95,380 L75,380 Z M105,255 L125,255 L125,380 L105,380 Z" data-name="Piernas y Gemelos" data-symptom="Pesadez y mala circulación." data-massage="Drenaje Linfático / Masaje Circulatorio" />
+                </svg>
+            </div>
+        </section>
+
+        <div id="info-panel" class="hidden">
+            <h3 id="panel-title">Zona Seleccionada</h3>
+            <p><strong>Lo que tu cuerpo dice:</strong> <span id="panel-symptom">...</span></p>
+            <p><strong>Nuestra recomendación:</strong> <span id="panel-massage">...</span></p>
+            <a id="whatsapp-btn" href="#" target="_blank" class="btn-primary">Reservar sesión para esta zona</a>
+            <button id="close-btn" class="btn-secondary">Cerrar</button>
+        </div>
+
+        <section class="educational-section">
+            <h2>Aprende sobre tu Cuerpo</h2>
+            <div class="edu-grid">
+                <div class="edu-card" onclick="showEdu('muscular')">
+                    <h3>Sistema Muscular</h3>
+                    <p>Movimiento y estabilidad.</p>
+                </div>
+                <div class="edu-card" onclick="showEdu('linfatico')">
+                    <h3>Sistema Linfático</h3>
+                    <p>Eliminación de toxinas.</p>
+                </div>
+                <div class="edu-card" onclick="showEdu('cadenas')">
+                    <h3>Cadenas Musculares</h3>
+                    <p>La conexión total.</p>
+                </div>
+            </div>
+            
+            <div id="edu-content" class="hidden">
+                <div class="edu-box">
+                    <h4 id="edu-title"></h4>
+                    <p id="edu-text"></p>
+                    <button onclick="closeEdu()" class="btn-secondary">Volver</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
